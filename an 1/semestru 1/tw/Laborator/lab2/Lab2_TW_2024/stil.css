@@ -1,0 +1,47 @@
+body{
+  background: PaleGoldenRod;
+
+}
+ol,ul,p{
+    text-align: left;
+}
+section{
+    text-align: center;
+    margin:auto;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+table,li{
+    margin:auto;
+}
+iframe{
+    width: 600px;
+    height:400px;
+    margin:auto;
+}
+
+header{
+    background: GoldenRod;
+    padding:0;
+    text-align: center;
+    margin:auto;
+}
+nav ol {
+  list-style-type: upper-roman;
+  text-transform: capitalize;
+  padding:5em ;
+  border:0.2em solid GoldenRod;
+}
+nav a {
+  color: gray;
+}
+figure{
+  display: inline-block;
+}
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  background: khaki;
+}
