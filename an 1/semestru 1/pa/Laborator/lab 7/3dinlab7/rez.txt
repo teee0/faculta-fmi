@@ -1,0 +1,2 @@
+paunescu.txt cuvantul nu a fost gasit
+eminescu.txt 1 5 8

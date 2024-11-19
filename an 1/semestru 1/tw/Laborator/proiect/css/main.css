@@ -1,0 +1,13 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    padding: 0 20px;
+}
+
+aside{
+    border: 1px solid gray;
+    
+}
