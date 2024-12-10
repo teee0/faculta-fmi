@@ -5,13 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="24ec1f3d-481c-45a9-85aa-9d670ac54ca1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../lab 3/1dinlab3/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lab 3/1dinlab3/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lab 3/1dinlab3/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lab 3/1dinlab3/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lab 3/1dinlab3/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lab 2/10dinlab2/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../lab 2/10dinlab2/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lab 2/6dinlab2/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../lab 2/6dinlab2/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PA_laborator2_2024.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lab 3/13dinlab3/baza.in" beforeDir="false" afterPath="$PROJECT_DIR$/../../lab 3/13dinlab3/baza.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10dinlab4/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../10dinlab4/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../11dinlab4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../11dinlab4/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../4dinlb4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../4dinlb4/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5dinlab4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../5dinlab4/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5dinlab4/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../5dinlab4/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../9dinlab4/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../9dinlab4/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lab 9/2dinlab9/spectacole.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../lab 9/2dinlab9/spectacole.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PA_laborator1_2024.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../tw/Laborator/proiect/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../tw/Laborator/proiect/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../tw/Laborator/proiect/css/nav.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../tw/Laborator/proiect/html/home.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,9 +28,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../../.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2nsenyj9KWXytZmbeLB7yYxNHkn" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -33,7 +40,8 @@
   "keyToString": {
     "Python.main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main"
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/sorse/resurse git/an 1/semestru 1/pa/Laborator/lab 4/14dinlab4"
   }
 }]]></component>
   <component name="RunManager">
@@ -63,7 +71,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-0e3be3396995-c546a90a8094-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.23339.19" />
+        <option value="bundled-python-sdk-d7ad00fb9fc3-c546a90a8094-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.23726.102" />
       </set>
     </attachedChunks>
   </component>

@@ -1,0 +1,15 @@
+#container-grid{
+    display: grid;
+    & h1{
+        grid-row: 1;
+    }
+    & p{
+        grid-row: 2;
+    }
+}
+
+.grid-poze{
+    display: grid;
+    gap:2%;
+    grid-template-columns: repeat(2, 1fr);
+}

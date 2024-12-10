@@ -1,13 +1,63 @@
 body{
     margin: 0;
     padding: 0;
+
+    background-color: lightgoldenrodyellow;
+}
+footer{
+    padding:2%;
 }
 
 main{
     padding: 0 20px;
+    /*background-color: #f6f6f6;*/
+    margin: 0 2em;
+    background-color: palegoldenrod;
+    color:saddlebrown;
+}
+.grid-poze{
+    width:60%;
+    box-shadow: 0 0px 5px gray;
+    padding: 0.5% 0.5% 1% 0.5%;
+    img{
+        width:100%;
+        height:auto;
+    }
+    & img:nth-of-type(3n+1){
+        padding: 1%;
+        background-color: goldenrod;
+    }
 }
 
-aside{
-    border: 1px solid gray;
-    
+
+.grid-poze{
+    display: grid;
+    gap:2%;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+h1 {
+    font-size: 4vw
+}
+h2 {
+    font-size: 3vw;
+}
+p {
+    font-size: 1.5vw;
+}
+
+@media (max-width: 768px) {
+    h1{
+        font-size: 4rem;
+    }
+    h2{
+        font-size: 3rem;
+    }
+    p{
+        font-size: 1.5rem;
+    }
+
+    #container-grid p{
+        grid-row: 1 !important;
+    }
 }

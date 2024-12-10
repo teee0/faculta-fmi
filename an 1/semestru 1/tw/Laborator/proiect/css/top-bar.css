@@ -1,0 +1,91 @@
+#top-bar {
+    width:100%;
+    margin:0;
+    font-size: max(20px,2vmax);
+    background-color: palegoldenrod;
+    color:saddlebrown;
+    border: 2px solid black;
+    & ul{
+        margin:0;
+        padding: 0;
+    }
+    & li{
+        display: flex;
+        color:saddlebrown;
+        list-style-type: none;
+    }
+    & a{
+        color:inherit;
+        text-decoration: none;
+    }
+    & img{
+        width: 3.25%;
+        height: 2.25%;
+        animation-name: zigzag;
+        animation-iteration-count: infinite;
+        animation-duration: 6s;
+    }
+}
+@keyframes zigzag
+{
+    0% {transform: rotate(45deg);opacity:1;}
+    25% {opacity:0.5;}
+    50% {transform: rotate(-45deg);opacity:1;}
+    75% {opacity:0.5;}
+    100% {transform: rotate(45deg);opacity:1;}
+}
+
+#top-bar>nav>ul{
+    display: flex;
+    justify-content: space-around;
+
+    &>li{
+        position: relative;
+        margin: 0.2em 0;
+        padding: 0 ;
+        &:hover .meniu-dropdown{
+            display: inline flex;
+        }
+
+        transition: box-shadow 0.3s ease-in-out,background-color 0.2s 0.2s;
+        &:hover{
+            box-shadow: 0 0px 5px gray;
+            background-color: beige;
+        }
+    }
+}
+li:has(.meniu-dropdown)::after{
+    content: "ˇ ";
+}
+.meniu-dropdown{
+    display: none;
+    /*display: flex;*/
+    position: absolute;
+    top:100%;
+    z-index: 1;
+    flex-direction: column;
+
+    background-color: palegoldenrod;
+    & li{
+        font-size: 0.85em;
+        border-width: 0.1em 0.1em 0 0.1em;
+        border-color: black;
+        border-style: solid;
+        &:last-child{
+            border-width:0.1em;
+        }
+    }
+}
+
+header{
+    font-size: max(35px,3.5vmax);
+    & img{
+        padding:1% 0.3% 0 0.3%;
+        transform: rotate(-30deg);
+    }
+}
+/*
+#top-bar li:hover > ul{
+    box-shadow: 0 0 5px black;
+}
+*/
