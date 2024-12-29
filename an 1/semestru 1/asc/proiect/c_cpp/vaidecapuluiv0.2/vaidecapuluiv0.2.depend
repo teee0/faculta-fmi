@@ -1,0 +1,49 @@
+# depslib dependency file v1.0
+1734714257 source:/home/teo/sorse/asc/proiect/vaidecapuluiv0.2/add.cpp
+	"add.h"
+
+1734709408 source:/home/teo/sorse/asc/proiect/vaidecapuluiv0.2/defrag.cpp
+
+1734695042 source:/home/teo/sorse/asc/proiect/vaidecapuluiv0.2/del.cpp
+	"del.h"
+
+1734695402 source:/home/teo/sorse/asc/proiect/vaidecapuluiv0.2/main.cpp
+	<iostream>
+	"add.h"
+	"get.h"
+	"del.h"
+	"defrag.h"
+	"variabile.h"
+
+1734649080 /home/teo/sorse/asc/proiect/vaidecapuluiv0.2/add.h
+	"variabile.h"
+	<iostream>
+	<utility>
+	<cstdio>
+	"get.h"
+
+1734709479 /home/teo/sorse/asc/proiect/vaidecapuluiv0.2/get.h
+	"variabile.h"
+	<utility>
+	<iostream>
+	<cstdio>
+
+1734696933 /home/teo/sorse/asc/proiect/vaidecapuluiv0.2/variabile.h
+	<iostream>
+	<fstream>
+
+1734694976 /home/teo/sorse/asc/proiect/vaidecapuluiv0.2/del.h
+	"variabile.h"
+	<iostream>
+	<utility>
+	<cstdio>
+	"get.h"
+
+1734622367 /home/teo/sorse/asc/proiect/vaidecapuluiv0.2/defrag.h
+
+1734709669 source:/home/teo/sorse/asc/proiect/vaidecapuluiv0.2/get.cpp
+	"get.h"
+
+1734715181 source:/home/teo/sorse/asc/proiect/vaidecapuluiv0.2/variabile.cpp
+	"variabile.h"
+

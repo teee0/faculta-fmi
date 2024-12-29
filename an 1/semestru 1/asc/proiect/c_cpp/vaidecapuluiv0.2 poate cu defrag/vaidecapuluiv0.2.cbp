@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="vaidecapuluiv0.2" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/vaidecapuluiv0" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/vaidecapuluiv0" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="1.in" />
+		<Unit filename="add.cpp" />
+		<Unit filename="add.h" />
+		<Unit filename="defrag.cpp" />
+		<Unit filename="defrag.h" />
+		<Unit filename="del.cpp" />
+		<Unit filename="del.h" />
+		<Unit filename="get.cpp" />
+		<Unit filename="get.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="variabile.cpp" />
+		<Unit filename="variabile.h" />
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>

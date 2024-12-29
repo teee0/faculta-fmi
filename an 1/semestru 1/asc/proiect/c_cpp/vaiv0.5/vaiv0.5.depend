@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1735088010 source:/home/teo/sorse/asc/proiect/vaiv0.5/main.cpp
+	<cstdio>
+	<tuple>
+
+1735244350 source:/home/teo/sorse/asc/proiect/vaiv0.5/main.c
+	<stdio.h>
+	<stdbool.h>
+
+1735368529 source:/home/teo/sorse/asc/proiect/c_cpp/vaiv0.5/main.c
+	<stdio.h>
+	<stdbool.h>
+
