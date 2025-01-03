@@ -150,7 +150,7 @@ void ask/*get0*/(int minim)
         }
     }
     spatiu = end-start+1;
-    if(/*start==-1 || */minim > spatiu)
+    if(start==-1 || minim > spatiu)
     {
         start=0;
         end=0;
@@ -196,9 +196,13 @@ void add()
 
 void del_intern(int descriptor)
 {
+    //nu modifica start si end pt ca mor
+    int t_start=start, t_end=end;
     get_intern(descriptor);
     if(end!=0)
         put(0);
+    start=t_start;
+    end=t_end;
 }
 
 void del()
@@ -214,14 +218,14 @@ void defrag_intern()
     {
         //in unidemnsional, orice gol nefinal e umplut la defragmentare
         ask(0);
+        int prim_gol=start;
         if(end%1023 == 0) break;
         int fd_mutat = v[end+1];
-        int prim_gol=start;
 
-        del_intern(fd_mutat);
-
+        //df
         get_intern(fd_mutat);
 
+        del_intern(fd_mutat);
 
         end=prim_gol+end-start;
         start=prim_gol;
@@ -229,7 +233,6 @@ void defrag_intern()
         put(fd_mutat);
     }
 }
-
 void defrag()
 {
     defrag_intern();

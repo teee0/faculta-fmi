@@ -26,6 +26,7 @@
   end: .long 0
   #atrocitate pe pamant
   fd_curent: .byte 0
+  prim_gol: .space 4
   #read at runtime
   nr_op: .space 4
   t_op: .space 4
@@ -256,11 +257,16 @@ ask:
 	movl end, %eax
 	sub start, %eax
 	add $1, %eax
-    	
+  
+  cmp $-1, start
+  je nui_bun
 	cmp %eax, 4(%esp)
   jle ask_exit
+  
+  nui_bun:
   movl $0, start
   movl $0, end
+  
   ask_exit:
 
   ret
@@ -350,7 +356,7 @@ del_intern:
   call get_intern
   #popl %ebx
   
-  cmp $0, end
+  cmpl $0, end
   je di_exit
 		pushl $bzero#vezi
 		call put
@@ -375,6 +381,49 @@ del:
   ret
 
 defrag_intern:
+	while:#in unidemnsional, orice gol nefinal e umplut la defragmentare
+	  pushl $0
+		call ask
+		pop %ebx
+		
+		movl start, %eax
+		movl %eax, prim_gol
+		movl end,%eax
+		cmpl last_i, %eax
+		je end_while
+		cmp $0, %eax 
+		je end_while
+		
+		xorl %ecx, %ecx #daca ceva nu mere i de aci
+		movl end, %eax#inutil
+		addl $1, %eax
+		movb (%edi,%eax,1), %cl
+		movb %cl, descriptor
+		# fd_mutat e descriptor
+
+		#pushl descriptor
+		call get_intern
+		#pop %ebx
+		
+		#pushl descriptor
+		call del_intern
+		#pop %ebx
+		
+		movl prim_gol, %eax
+		add end, %eax
+		sub start, %eax
+		movl %eax, end
+		
+		movl prim_gol, %eax
+		movl %eax, start
+
+		pushl $descriptor
+		call put
+		pop %ebx
+			
+		
+	jmp while
+	end_while:
   ret
  
 defrag:
@@ -398,20 +447,14 @@ citeste_t_op:
   ret
 
 main:
-  #movl $10,%ecx
-  #for_test: 
-	#lea v, %edi
-	#movb $0, (%edi,%ecx,1)
-  
-  #loop for_test
-	#movb $7, (%edi)
 
   lea v, %edi
   call citeste_nr_op
 
   movl nr_op, %ecx
 
-  for_main: #for _ in range(nr_op-1, 0, -1)
+  for_main:
+  
   pushl %ecx
 
   call citeste_t_op
