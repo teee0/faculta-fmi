@@ -1,0 +1,71 @@
+print_mem:
+	movl linie, %esi
+	pushl %esi
+	movl descriptor, %ebp
+	pushl %ebp
+
+	for_linii_pm:
+		movl linie, %edx
+		cmpl %edx, line_size
+		je for_linii_pm_exit
+
+		movb $0, descriptor
+		movl $-1, start
+		
+		movl $0, %ecx
+		for_pm:
+		cmp %ecx, line_size
+		je for_pm_exit
+		
+		call calc_index
+		movb (%edi,%eax,1), %dl
+		
+		cmpb $0, %dl
+		jne if_pm_vi_non0
+		cmpl $-1, start
+		je if_pm_exit
+			call print_fd	
+			movl $-1, start
+			
+		jmp if_pm_exit
+		if_pm_vi_non0:
+		
+		cmpl $-1, start
+		jne if_pm_start_gasit
+			movl %ecx, start
+			movl %ecx, end
+			movb %dl, descriptor
+		jmp if_pm_exit
+		if_pm_start_gasit:
+				cmpb %dl, descriptor
+				jne if_pm_vi_prost
+					movl %ecx, end
+				jmp if_pm_exit
+				if_pm_vi_prost:
+					call print_fd
+					
+					movl %ecx, start
+					movl %ecx , end
+					movb %dl, descriptor
+		if_pm_exit:
+		
+		inc %ecx
+		jmp for_pm
+		for_pm_exit:
+		
+		movl end, %edx
+		cmpl last_i, %edx
+		jne for_linii_pm_exit
+		cmpl $-1, start
+		je for_linii_pm_exit
+			call print_fd
+			
+		incl linie
+		jmp for_linii_pm
+  for_linii_pm_exit:
+  
+  pop %esi
+  pop %ebp
+  movl %esi, linie
+  movl %ebp, descriptor
+  ret

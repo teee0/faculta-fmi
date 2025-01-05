@@ -47,3 +47,57 @@
 1734715181 source:/home/teo/sorse/asc/proiect/vaidecapuluiv0.2/variabile.cpp
 	"variabile.h"
 
+1734709408 source:/mnt/sda4/sorse2/resurse git/an 1/semestru 1/asc/proiect/c_cpp/vaidecapuluiv0.2/defrag.cpp
+
+1734695042 source:/mnt/sda4/sorse2/resurse git/an 1/semestru 1/asc/proiect/c_cpp/vaidecapuluiv0.2/del.cpp
+	"del.h"
+
+1734694976 /mnt/sda4/sorse2/resurse git/an 1/semestru 1/asc/proiect/c_cpp/vaidecapuluiv0.2/del.h
+	"variabile.h"
+	<iostream>
+	<utility>
+	<cstdio>
+	"get.h"
+
+1734696933 /mnt/sda4/sorse2/resurse git/an 1/semestru 1/asc/proiect/c_cpp/vaidecapuluiv0.2/variabile.h
+	<iostream>
+	<fstream>
+
+1734709479 /mnt/sda4/sorse2/resurse git/an 1/semestru 1/asc/proiect/c_cpp/vaidecapuluiv0.2/get.h
+	"variabile.h"
+	<utility>
+	<iostream>
+	<cstdio>
+
+1734709669 source:/mnt/sda4/sorse2/resurse git/an 1/semestru 1/asc/proiect/c_cpp/vaidecapuluiv0.2/get.cpp
+	"get.h"
+
+1734715181 source:/mnt/sda4/sorse2/resurse git/an 1/semestru 1/asc/proiect/c_cpp/vaidecapuluiv0.2/variabile.cpp
+	"variabile.h"
+
+1734737533 source:/mnt/sda4/sorse2/resurse git/an 1/semestru 1/asc/proiect/c_cpp/vaidecapuluiv0.2/add.cpp
+	"add.h"
+
+1734649080 /mnt/sda4/sorse2/resurse git/an 1/semestru 1/asc/proiect/c_cpp/vaidecapuluiv0.2/add.h
+	"variabile.h"
+	<iostream>
+	<utility>
+	<cstdio>
+	"get.h"
+
+1736089838 source:/mnt/sda4/sorse2/resurse git/an 1/semestru 1/asc/proiect/c_cpp/vaidecapuluiv0.2/main.cpp
+	<iostream>
+	"add.h"
+	"get.h"
+	"del.h"
+	"defrag.h"
+	"variabile.h"
+
+1734730800 /mnt/sda4/sorse2/resurse git/an 1/semestru 1/asc/proiect/c_cpp/vaidecapuluiv0.2/defrag.h
+	"variabile.h"
+	<iostream>
+	<utility>
+	<cstdio>
+	"get.h"
+	"del.h"
+

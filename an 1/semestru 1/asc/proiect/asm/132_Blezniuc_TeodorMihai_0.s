@@ -152,7 +152,7 @@ print_mem:
   pm_exit:
   ret
 
-get_intern: #schimbi tu descriptor inainte ca mor
+get_intern: #schimbi tu descriptor inainte
   movl $-1, start
   movl $-1, end
   

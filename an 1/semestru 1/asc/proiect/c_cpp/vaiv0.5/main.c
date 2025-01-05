@@ -196,13 +196,9 @@ void add()
 
 void del_intern(int descriptor)
 {
-    //nu modifica start si end pt ca mor
-    int t_start=start, t_end=end;
     get_intern(descriptor);
     if(end!=0)
         put(0);
-    start=t_start;
-    end=t_end;
 }
 
 void del()
