@@ -7,7 +7,7 @@ void defrag_intern()
     while(1)
     {
         //in unidemnsional, orice gol nefinal e umplut la defragmentare
-        auto gol = get0();//vezi! ca asta e asa doar de exemplu schimb o
+        auto gol = get0();//vezi!
         if(gol.second%1023 == 0) break;
         int fd_mutat = v[gol.second+1];
 
@@ -17,10 +17,9 @@ void defrag_intern()
         del_intern(fd_mutat);
         for(int i=gol.first;i<=gol.first+next.second-next.first;i++)
         {
-            v[i]=fd_mutat;//merge inlocuit cu un del intern mai general
+            v[i]=fd_mutat;
         }
     }//vezi cum schimbi whileu
-//vezi ca nu mere pt ultimu element (creca acm mere mistic magic)
 }
 void defrag()
 {

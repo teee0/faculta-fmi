@@ -8,7 +8,7 @@ pair<int,int> get_intern_linie(int descriptor,int linie)
 
     for(int i=0; i<= 1023; i++)
     {
-        if(!gasit_start && v[linie][i] == descriptor)//gresit (idk dc tf)
+        if(!gasit_start && v[linie][i] == descriptor)
         {
             start = i;
             gasit_start=true;
@@ -16,7 +16,6 @@ pair<int,int> get_intern_linie(int descriptor,int linie)
 
         if (gasit_start && v[linie][i]==descriptor)
             end = i;
-        //if (end!=0 && v[linie][i]!=descriptor)break;//ca sa mearga get_intern(0) ca e singuru necontiguu
     }
 
     return make_pair(start,end);
@@ -46,7 +45,7 @@ pair<int,int> get0_linie(int minim, int linie)//pe linie
     {
         if(v[linie][i]==0)
         {
-            if(!gasit_start)//gresit (idk dc tf)
+            if(!gasit_start)
             {
                 start = i;
                 gasit_start=true;

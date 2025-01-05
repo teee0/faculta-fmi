@@ -8,7 +8,7 @@ pair<int,int> get_intern(int descriptor)
 
     for(int i=0; i<= 1023; i++)
     {
-        if(!gasit_start && v[i] == descriptor)//gresit (idk dc tf)
+        if(!gasit_start && v[i] == descriptor)
         {
             start = i;
             gasit_start=true;
@@ -16,7 +16,6 @@ pair<int,int> get_intern(int descriptor)
 
         if (gasit_start && v[i]==descriptor)
             end = i;
-        //if (end!=0 && v[i]!=descriptor)break;//ca sa mearga get_intern(0) ca e singuru necontiguu
     }//vezi daca chiar trb sa returneze 0,1023
 
     return make_pair(start,end);
@@ -32,7 +31,7 @@ pair<int,int> get0(int minim)//pe linie
     {
         if(v[i]==0)
         {
-            if(!gasit_start)//gresit (idk dc tf)
+            if(!gasit_start)
             {
                 start = i;
                 gasit_start=true;
@@ -57,9 +56,7 @@ pair<int,int> get0(int minim)//pe linie
         }
 
 
-
-
-    }//vezi daca chiar trb sa returneze 0,1023
+    }
 
     return make_pair(start,end);
 }

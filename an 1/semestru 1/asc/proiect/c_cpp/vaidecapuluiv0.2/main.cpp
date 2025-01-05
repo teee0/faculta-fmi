@@ -12,9 +12,6 @@ enum t_op { t_add=1,t_get,t_del,t_defrag };
 
 int main()
 {
-//  for (int i = 0; i < 1024; ++i) {
-//      v[i] = new int[1024];
-//  }
   nr_op=input("Numărul de operații: ");
   for (int i=0; i < nr_op; i++)
   {

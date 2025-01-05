@@ -23,7 +23,6 @@ void add()//n + pe urmatoarele 2N linii veti primi, succesiv,
         dimensiune=input("size: ");
         dimensiune=abstract(dimensiune);//vezi asta
         auto rez = add_intern(descriptor,dimensiune);
-        //print_vector();
         printf("%d: (%d, %d)\n",descriptor,rez.first,rez.second);
     }
 
