@@ -1,0 +1,8 @@
+#!/bin/bash
+cd "/mnt/sda4/sorse2/resurse git/an 1/semestru 1/tw/Curs"
+
+for ((i=1;i<=11;i++)); do
+  mv "curs ""$i"" TW" "curs ""$i"
+
+done
+

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    window.onload = function()
+    {
+      for (let i=0;i<6;i++)
+      {
+        let buton = document.createElement("button");
+        document.body.appendChild(buton);
+        buton.innerHTML =`buton ${i+1}`;
+        buton.style.width = "100px";
+        buton.style.height = "40px";
+        buton.className="buton";
+        buton.style.backgroundColor=(i%2==0)?"yellow":"green";
+        buton.style.color=(i%2==0)?"black":"white";
+        buton.culoareInitiala=buton.style.backgroundColor;
+        buton.onclick = function(event)
+        {
+          event.stopPropagation();
+          if (buton.style.backgroundColor == "red"){
+            document.body.removeChild(buton);
+          }
+          else{
+            buton.style.backgroundColor = "red";
+            setTimeout(function(){
+              buton.style.backgroundColor = buton.culoareInitiala;
+              }, 5000
+             );
+          }
+        }
+      }
+    }
+    window.onclick = function(){
+      let butoane = document.getElementsByTagName("button");
+      alert(`Mai sunt ${butoane.length} butoane`);
+    }
+  </script>
+  <meta charset="UTF-8">
+  <title>Exercitiul2</title>
+  <style>
+    .buton{
+      border-radius: 5px;
+      margin-right: 10px;
+    }
+  </style>
+
+</head>
+<body>
+
+</body>
+</html>

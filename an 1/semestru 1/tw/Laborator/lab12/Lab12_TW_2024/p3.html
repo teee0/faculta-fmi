@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    window.onload = function()
+    {
+      let paragraf = document.getElementById("info");
+      let nr = 0;
+      window.onkeydown = function(event)
+      {
+        if((event.key=="a"))
+        {
+          if(nr==0)
+          {
+            nr++;
+            let data = new Date;
+            paragraf.innerHTML += ", " + data;
+            c=setInterval(function(){
+              font = Math.floor(Math.random()*21)+10;
+              paragraf.style.fontSize=font+"px";
+            },3000);
+          }
+          else{
+            clearInterval(c);
+          }
+        }
+      }
+    }
+
+  </script>
+<meta charset="UTF-8">
+<title>Exercitiul3</title>
+</head>
+
+<body>
+
+<p id="info">Astazi este o zi cu soare</p>
+
+</body>
+</html>
