@@ -36,6 +36,10 @@ main{
     grid-template-columns: repeat(2, 1fr);
 }
 
+.clicked{
+  color: saddlebrown !important;
+}
+
 h1 {
     font-size: 4vw
 }
@@ -45,7 +49,6 @@ h2 {
 p {
     font-size: 1.5vw;
 }
-
 @media (max-width: 768px) {
     h1{
         font-size: 4rem;
@@ -56,8 +59,11 @@ p {
     p{
         font-size: 1.5rem;
     }
-
-    #container-grid p{
-        grid-row: 1 !important;
+    .grid-poze{
+        width:80%;
+    }
+    #container-grid{
+        display: flex !important;
+        flex-direction: column;
     }
 }

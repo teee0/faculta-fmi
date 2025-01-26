@@ -1,0 +1,21 @@
+body{
+  text-align: center;
+}
+#login-box {
+    width: 280px;
+    padding: 3vw;
+    border: 1px solid #ccc;
+    text-align: center;
+    margin:auto;
+}
+
+input, button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+
+button {
+    cursor: pointer;
+}

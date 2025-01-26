@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/login.css">
+        <script src="/script/main.js" type="text/javascript" defer></script>
+        <script src="/script/login.js" type="text/javascript" defer></script>
+        <title>Jocuri postapocaliptice</title>
+    </head>
+    <body>
+      <main id="login-box">
+          <h2>Login</h2>
+          <form id="loginForm" action="/mnt/sda4/sorse2/resurse git/an 1/semestru 1/tw/Laborator/proiect/html/index.html" method="post">
+              <input type="text" name="username_login" placeholder="username" required>
+              <input type="password" name="password_login" placeholder="parolă" required>
+              <button type="submit">Login</button>
+          </form>
+
+          <canvas id="myCanvas" width="200" height="90"></canvas>
+          <script>
+            const canvas = document.getElementById("myCanvas");
+            const ctx = canvas.getContext("2d");
+            ctx.fillStyle = "saddlebrown";
+            ctx.fillRect(0, 40, 200, 10);
+            ctx.fillRect(0, 60, 200, 10);
+            ctx.fillRect(0, 80, 200, 10);
+          </script>
+
+          <h2>Signup</h2>
+          <form id="signupForm">
+              <input type="text" name="username_signup" placeholder="username" required>
+              <input type="password" name="password_signup" placeholder="parolă" required>
+              <input type="password" name="confirmPassword_signup" placeholder="confirmă parolă" required>
+              <button type="submit">Sign Up</button>
+          </form>
+
+
+
+      </main>
+    </body>
+</html>

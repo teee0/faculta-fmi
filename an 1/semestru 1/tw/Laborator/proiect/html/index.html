@@ -2,9 +2,10 @@
 <html lang="ro">
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="../css/main.css">
-        <link rel="stylesheet" href="../css/top-bar.css">
-        <link rel="stylesheet" href="../css/grid.css">
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/top-bar.css">
+        <link rel="stylesheet" href="/css/grid.css">
+        <script src="/script/main.js" type="text/javascript"></script>
         <title>Jocuri postapocaliptice</title>
     </head>
     <body>
@@ -12,7 +13,7 @@
             <div id="top-bar">
                 <header>
                     <a href="index.html">
-                        <img src="../assets/logo.png" alt="logo">
+                        <img src="/assets/logo.png" alt="logo">
                         <span>Jocuri postapocaliptice</span>
                     </a>
                 </header>
@@ -52,6 +53,27 @@
                     <p>Site-ul nostru este dedicat celor mai captivante și înfricoșătoare jocuri video din universurile post-apocaliptice. Aici vei găsi titluri care explorează lumi devastate de catastrofe globale, unde supraviețuirea este un joc de viață și moarte. </p>
                     <p>Dacă ești pasionat de aventuri intense, explorări periculoase și atmosfere înfricoșătoare, explorează jocurile din seriile <i>S.T.A.L.K.E.R.</i>, <i>Metro</i> și <i>Dying Light</i>.</p>
                 </main>
+                <button id="loadDataButton">Încarcă date</button>
+                <div id="output"></div>
+
+                <script>
+                function lista(joc){
+                  para = document.createElement("p");
+                  document.getElementById("output").appendChild(para);
+                  para.innerHTML = `game: ${joc.game}, release_year: ${joc.release_year}`;
+                }
+                  document.getElementById("loadDataButton").addEventListener("click", function() {
+                    fetch("/assets/data.json")
+                      .then(response => response.json())
+                      .then(data => {
+                        //Array.from(data).forEach(joc => lista(joc));
+                        console.log(data);
+                      })
+                      .catch(error => {
+                        console.log("Eroare la prelucrea datelor:", error);
+                      });
+                  });
+                </script>
                 <footer>
                     <h2>Despre site-ul nostru</h2>
                     <p>La <i>Jocuri Postapocaliptice</i>, ne concentrăm pe explorarea celor mai bune jocuri care se petrec în lumi apocaliptice. Fiecare dintre jocurile prezentate pe acest site te va transporta într-un univers unde supraviețuirea și descoperirea sunt esențiale. Află mai multe despre fiecare serie de jocuri și pregătește-te pentru o călătorie plină de pericole și aventuri!</p>
