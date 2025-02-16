@@ -1,0 +1,10 @@
+.patrat {
+    border: 1px solid darkgreen;
+    width: 50px;
+    height: 50px;
+    background-color: green;
+    position: absolute;
+}
+body {
+    height: 100vh;
+}
