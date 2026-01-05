@@ -1,0 +1,31 @@
+- Set the structure for the next lesson & distribute the work among the team members
+- Materials preparation
+  - Course
+    - Format: text, drawing, video
+    - Intuition & practical examples
+    - Prepare questions and exercises throughout
+    - Recap stage
+    - [Course](https://cs.unibuc.ro/courses/lmc/)
+  - Lab (la fiecare lectie cate o sesiune de prolog)
+    - [official labs](https://cs.unibuc.ro/courses/lmc/)
+    - [99 prolog problems](https://www.ic.unicamp.br/~meidanis/courses/mc336/2009s2/prolog/problemas/)
+  - Seminar
+    - Questions throughout
+    - [official seminars](https://cs.unibuc.ro/courses/lmc/)
+    - [full seminars](https://github.com/anamariapanait10/FMI-BSc-Resources/tree/master/Year%20I/sem%201/Logica%20matematica%20si%20computationala/seminar)
+- Integrate exam exercises
+  - [resource 1](https://github.com/anamariapanait10/FMI-BSc-Resources/tree/master/Year%20I/sem%201/Logica%20matematica%20si%20computationala/examen)
+  - [resource 2](https://github.com/FMI-Materials/FMI-Materials/tree/main/Year%20I/Semester%20I/Logica%20Matematica%20Si%20Computationala/Modele%20Examen)
+- Push the final version and announce the collaborator
+- Make announcement to community about what will be taught next & update the table of contents
+- Teaching plan setting
+  - Materials recap
+  - Presentation preparation:
+    - writing board
+    - video proiector
+  - Foile de prezenta & upload on Drive
+  - Overview
+  - Constant feedback
+  - Examples & intuition
+  - **Recap with questions about taught topics**
+  - Interactive environment

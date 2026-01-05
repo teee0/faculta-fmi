@@ -1,0 +1,13 @@
+
+
+### PANA PE 24 AUGUSTTTTTTTTTT ###
+
+Buna! Problemele ar fi:
+= Nu ai pagina separata cu titlul.
+- La diagrama conceptuala pentru a respecta notatiile de la curs ar trebui sa marchezi cheia primara cu # sau subliniata, legaturile dintre tabele ar trebui marcate cu X-uri (subliniate sau nu in fucntie de caz) pe partea unde se afla cheia primara (ai model in curs).
+= Schemele relationale ar trebui scrise dupa modelul de la curs.
+- La formele normale ar trebui sa dai si exemple de date (cateva linii) ce s-ar putea afla in tabelele ce nu respecta formele normale si cum arata ele in tabelele normalizate (ai model in curs).
+- Cerinta 12 a) nu este complet respectata, deoarece trebuia ca in subcererea sincronizata sa se regaseasca minim 3 tabele, iar tu ai doar 2.
+- Cerinta 12 b) nu este indeplinita, ce ai scris tu este subcerere in SELECT, nu in FROM.
+- Cerinta 12 c) nu este respectata, deoarece trebuia ca in subcererea nesincronizata din HAVING sa ai minim 3 tabele, iar tu ai un singur tabel in subcerere si chiar unul singur in toata cererea.
+- Cel mai important, nu ai codul in documentul word si nici cerintele in limbaj natural. La ex 10, 11 trebuia inclus tot codul de creare si inserare, iar la 12 la fiecare cerere ar trebui sa ai: cerinta in limbaj natural, codul si captura de ecran cu rezultatul.

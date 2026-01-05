@@ -1,0 +1,8 @@
+%varianta 2 Blezniuc Teodor-Mihai 132%
+positions(_,[],[]).
+positions(N,[N|T],X) :- positions(N,T,Y), append(Y,[N],X) .
+positions(N,[H|T],X) :- positions(N,T,X), H \= N.
+
+common_prefix([],[],[]).
+
+common_prefix([X|L1],[Y,L2],R) :- common_prefix(L1,L2,R), X == Y, append([X],[Y],R).
