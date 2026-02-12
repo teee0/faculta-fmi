@@ -1,0 +1,5 @@
+Username: grupa232
+Password: oracle
+Hostname: 193.226.53.52
+Port: 1521
+Service name: db1

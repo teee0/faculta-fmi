@@ -1,0 +1,60 @@
+#include <fstream>
+#include<vector>
+using namespace std;
+
+ifstream fin("disjoint.in");
+ofstream fout("disjoint.out");
+
+int N, M;
+vector<int>tata;
+vector<int>h;
+
+int Find(int node){
+    if(tata[node]==0)
+        return node;
+
+    tata[node]=Find(tata[node]);
+
+    return tata[node];
+}
+
+void Union(int x, int y){
+    int radX=Find(x);
+    int radY=Find(y);
+    if(radX == radY)
+        return ;
+    if(h[radX]<h[radY]){
+        tata[radX]=radY;
+    }
+    else if(h[radX]>h[radY]){
+        tata[radY]=radX;
+    }
+    else{
+        h[radX]++;
+        tata[radX]=radY;
+    }
+}
+
+
+
+int main(){
+    fin>>N>>M;
+    tata.assign(N+1, 0);
+    h.assign(N+1, 0);
+
+    for(int i=1;i<=M;i++){
+        int x, y, op;
+        fin>>op>>x>>y;
+        if(op==1){
+            Union(x, y);
+        }
+        else{
+            if(Find(x)==Find(y))
+                fout<<"DA\n";
+            else
+                fout<<"NU\n";
+        }
+    }
+
+    return 0;
+}

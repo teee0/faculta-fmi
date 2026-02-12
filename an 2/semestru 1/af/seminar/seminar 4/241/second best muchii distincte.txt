@@ -1,0 +1,155 @@
+#include <iostream>
+#include <fstream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+ifstream fin("muchii.in");
+ofstream fout("apm.out");
+
+vector<int> vectorTati;
+vector<int> vectorInaltimi;
+
+int reprezentant(int x){
+    if(vectorTati[x] == 0){
+        return x;
+    }
+    else{
+        vectorTati[x] = reprezentant(vectorTati[x]);
+        return vectorTati[x];
+    }
+}
+
+
+void reunire(int x, int y){
+    x = reprezentant(x);
+    y = reprezentant(y);
+    if(vectorInaltimi[x] < vectorInaltimi[y]){
+        vectorTati[x] = y;
+    }
+    else if(vectorInaltimi[x] == vectorInaltimi[y]){
+        vectorTati[x] = y;
+        vectorInaltimi[y]++;
+    }
+    else{
+        vectorTati[y] = x;
+    }
+
+}
+
+vector<vector<int>> kruskal(vector<vector<int>> m, int nrNoduri){
+    for(int i=0; i<nrNoduri; i++){
+        vectorTati[i] = 0;
+    }
+    for(int i=0; i<nrNoduri; i++){
+        vectorInaltimi[i] = 0;
+    }
+
+    sort(m.begin(), m.end());
+    vector<vector<int>> rezultat;
+    for(auto muchie : m){
+        cout << muchie[0] << endl;
+        if(reprezentant(muchie[1]) != reprezentant(muchie[2])){
+            reunire(muchie[1], muchie[2]);
+            rezultat.push_back(muchie);
+            if(rezultat.size() >= nrNoduri){
+                break;
+            }
+           }
+    }
+    return rezultat;
+}
+
+void dfs(vector<vector<pair<int,int>>> &listaAdiacenta, int vfStart, int nodCurent, vector<int> &vizitati, vector<vector<int>> &mat){
+    vizitati[nodCurent] = 1;
+    for(auto node : listaAdiacenta[nodCurent]){
+        if(vizitati[node.first] == 0){
+            mat[vfStart][node.first] = max(mat[vfStart][nodCurent], node.second);
+
+            dfs(listaAdiacenta, vfStart, node.first, vizitati, mat);
+
+        }
+    }
+
+}
+
+vector<vector<int>> muchieMaxima(vector<vector<int>>& muchii, int nrNoduri){
+    vector<vector<int>> mat;
+    for(int i=0; i<=nrNoduri; i++){
+        vector<int> a;
+        for(int j=0; j<=nrNoduri; j++){
+            a.push_back(0);
+        }
+        mat.push_back(a);
+    }
+
+    vector<vector<pair<int,int>>> listaAdiacenta;
+    listaAdiacenta.resize(nrNoduri+1);
+
+    for(auto m : muchii){
+        listaAdiacenta[m[1]].push_back({m[2],m[0]});
+        listaAdiacenta[m[2]].push_back({m[1],m[0]});
+    }
+    for(int node = 1; node<= nrNoduri; node++){
+        vector<int> viz(nrNoduri+1, 0);
+        dfs(listaAdiacenta, node, node, viz, mat);
+    }
+
+    for(vector<int> line : mat){
+        for(int a : line){
+            cout << a << " ";
+        }
+        cout << endl;
+    }
+
+    return mat;
+
+}
+
+
+
+int main()
+{
+    vector<vector<int>> m;
+    int nrNoduri;
+    fin >> nrNoduri;
+    int nrMuchii;
+    fin >> nrMuchii;
+
+    for(int i=0; i<nrMuchii; i++){
+        int cost, x, y;
+        fin >> x >> y >> cost;
+        m.push_back({cost, x, y});
+    }
+
+    vectorTati.assign(nrNoduri + 1,0);
+    vectorInaltimi.assign(nrNoduri+1,0);
+
+    vector<vector<int>> rez;
+    rez = kruskal(m, nrNoduri);
+
+    vector<vector<int>> mat = muchieMaxima(rez, nrNoduri);
+
+    int difmin = 99999;
+    for(auto muc : m){
+        int dif = muc[0] - mat[muc[1]][muc[2]];
+        if(dif < difmin && dif != 0){
+            difmin = dif;
+        }
+    }
+
+
+    int s = 0;
+    for(auto& muc : rez){
+        s = s + muc[0];
+    }
+    cout << s << '\n';
+    cout << s + difmin << '\n';
+    fout << rez.size() << '\n';
+    for(auto& muc : rez){
+        fout << muc[1] << " " << muc[2] << '\n';
+    }
+    fout.close();
+
+    return 0;
+}

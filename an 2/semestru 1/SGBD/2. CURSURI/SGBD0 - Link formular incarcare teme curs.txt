@@ -1,0 +1,15 @@
+Pentru a fi luate in considerare si punctate temele de curs trebuie sa contina intr-un singur fisier de tip docx:
+1. Titlul cursului in care a fost enuntata tema (de ex. SGBD1 - Recapitulare BD. Introducere SGBD)
+2. Numele, Prenumele si Grupa
+3. Enuntul temei 
+   Cerinta in limbaj natural pe care ati creat-o / adaptat-o pentru a realiza tema
+4. Rezolvarea temei / cerintei
+   - cod scris ca text, nu ca imagine
+   - print-screen complet cu codul rulat din care sa reaiasa ca este compilat fara erori
+   - print-screen-uri cu toate cazurile tratate / exemplificate
+5. Concluzia
+   
+Obs: Orice explicatie / conluzie trebuie sa se bazeze pe o demonstratie practica, inclusa la punctul 4.    
+
+
+https://forms.gle/LcBmhJDFvSXoz5tC7

@@ -1,0 +1,46 @@
+class Solution {
+public:
+    vector<int>niv;
+    vector<int>niv_min;
+    vector<int>G[100005];
+
+    void dfs(int nod, vector<int>& viz, vector<vector<int>>& critical_edges){
+        viz[nod]=1;
+        niv_min[nod]=niv[nod];
+
+        for(auto y : G[nod]){
+            if(viz[y]==0){
+                niv[y]=niv[nod]+1;
+                dfs(y, viz, critical_edges);
+                if(niv[nod] < niv_min[y])
+                    critical_edges.push_back({nod, y});
+                niv_min[nod]=min(niv_min[nod], niv_min[y]);
+            }
+            else{
+                if(niv[y] < niv[nod]-1){
+                    niv_min[nod]=min(niv_min[nod], niv[y]);
+                }
+            }
+        }
+
+    }
+    vector<vector<int>> criticalConnections(int n, vector<vector<int>>& connections) {
+        
+        vector<int>viz;
+
+
+        viz.assign(n, 0);
+        niv.assign(n, 0);
+        niv_min.assign(n, 0);
+
+        for( auto &x : connections){
+            G[x[0]].push_back(x[1]);
+            G[x[1]].push_back(x[0]);
+        }
+        vector<vector<int>>critical_edges;
+        dfs(0, viz, critical_edges);
+
+        return critical_edges;
+
+    }
+};

@@ -1,0 +1,42 @@
+class Solution {
+public:
+    vector<vector<int>> rez;
+    void DFS(vector<int> &v, vector<int> &niv, vector<int> &niv_min, vector<vector<int>> &adj_list, int i){
+            v[i] = 1;
+            niv_min[i] = niv[i];
+            
+            for (auto &j : adj_list[i]){
+                if (v[j] == 0){
+                    niv[j] = niv[i]+1;
+                    DFS(v, niv, niv_min, adj_list, j);
+                    if (niv_min[j] > niv[i]){
+                        rez.push_back({i, j});
+                    }
+                    niv_min[i]= min(niv_min[j], niv_min[i]);
+                }
+                else{
+                    if (niv[i] - niv[j] > 1){
+                        niv_min[i] = min(niv_min[i], niv[j]); 
+                    }
+                }
+
+            }
+
+
+    }
+    vector<vector<int>> criticalConnections(int n, vector<vector<int>>& connections) {
+        vector<vector<int>> adj_list(n);
+        for (auto &con : connections){
+            adj_list[con[0]].push_back(con[1]);
+            adj_list[con[1]].push_back(con[0]);
+        }
+        vector<int> v(n, 0);
+        vector<int> niv(n, 0);
+        vector<int> niv_min(n, 0);
+        DFS(v, niv, niv_min, adj_list, 0);
+        return rez;
+
+
+
+    }
+};

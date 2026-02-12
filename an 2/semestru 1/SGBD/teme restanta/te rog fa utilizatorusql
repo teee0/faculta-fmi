@@ -1,0 +1,39 @@
+--conectare ca sys
+--definire role 
+create role sgbd_role;
+--atribuire privilegii si role-uri noului role
+grant connect to sgbd_role;
+grant resource to sgbd_role;
+grant create table to sgbd_role;
+grant create view to sgbd_role;
+grant create materialized view to sgbd_role;
+grant create synonym to sgbd_role;
+grant create procedure to sgbd_role;
+grant create sequence to sgbd_role;
+grant create trigger to sgbd_role;
+grant create type to sgbd_role;
+grant query rewrite to sgbd_role;
+grant select_catalog_role to sgbd_role;
+grant alter session to sgbd_role;
+grant select any dictionary to sgbd_role;
+grant create public database link to sgbd_role;
+grant create public synonym to sgbd_role;
+--definire utilizator
+create user sgbd_homedb1 identified by oracle
+profile default 
+default tablespace users 
+quota unlimited on users 
+account unlock;
+--atribuire role nou definit utilizatorulu
+grant sgbd_role to sgbd_homedb1;
+--atribuire privilegiu unlimited tablespace utilizatorului
+grant unlimited tablespace to sgbd_homedb1;
+--definirea conexiunii pentru utilizatorul sgbd_homedb1
+--Name: SGBD_HOMEDB1
+--Username: sgbd_homedb1
+--Role: default
+--Password: oracle
+--Connection Type: Basic
+--Hostname: localhost
+--Port: 1521
+--SERVICENAME: HOMEDB1PDB
