@@ -1,2 +1,2 @@
-"# materiale fmi unibuc 2024-2027"
+\# materiale fmi unibuc 2024-2027
 
